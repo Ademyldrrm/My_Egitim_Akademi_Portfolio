@@ -6,4 +6,5 @@
 <h5>Db First</h5>
 <h5>Entity FrameWork</h5>
 <h5>Sql Server</h5>
-![Ekran görüntüsü 2023-09-07 163446](https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/c115c78c-c968-465a-9786-40631a761d91)
+
+![Uploading Ekran görüntüsü 2023-09-07 163446.png…]()
