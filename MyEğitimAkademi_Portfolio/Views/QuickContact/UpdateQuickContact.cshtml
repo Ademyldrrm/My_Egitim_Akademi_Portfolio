@@ -1,0 +1,39 @@
+﻿@model MyEğitimAkademi_Portfolio.Models.QuickContact
+@{
+    ViewBag.Title = "UpdateQuickContact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hızlı iletişim Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>İletişim ID</label>
+    @Html.TextBoxFor(x => x.QuickContactID, new { @class = "form-control" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Instagram</label>
+    @Html.TextBoxFor(x => x.Intagram, new { @class = "form-control" })
+    <br />
+    <label>Linkedin</label>
+    @Html.TextBoxFor(x => x.Lınkedın, new { @class = "form-control" })
+    <br />
+    <label>Facebook</label>
+    @Html.TextBoxFor(x => x.Facebook, new { @class = "form-control" })
+    <br />
+    <label>Twitter</label>
+    @Html.TextBoxFor(x => x.Twitter, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-success">Verileri Güncelle</button>
+</form>

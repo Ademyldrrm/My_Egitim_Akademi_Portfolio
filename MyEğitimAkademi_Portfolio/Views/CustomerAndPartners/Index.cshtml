@@ -1,0 +1,31 @@
+﻿@model List<MyEğitimAkademi_Portfolio.Models.CustomerAndPartners>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>müşeri ve partner</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Müşteri Ve Oraklar</th>
+        <th>Başlık</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.CustomerAndPartnersID</td>
+    <td>@item.Title</td>
+    <td>@item.Description</td>
+    <td>@item.Image</td>
+    <td><a href="/CustomerAndPartners/DeleteCustomerAndPartners/@item.CustomerAndPartnersID" class="btn btn-outline-danger">Sil</a></td>
+    <td><a href="/CustomerAndPartners/UpdateCustomerAndPartners//@item.CustomerAndPartnersID" class="btn btn-outline-success">Güncelle</a></td>
+
+</tr>
+    }
+</table>
+<a href="/CustomerAndPartners/AddCustomerAndPartners/" class="btn btn-outline-primary">Yeni Müşteri Ve Ortak Girişi </a>
+

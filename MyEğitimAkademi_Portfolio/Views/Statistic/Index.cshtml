@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>İstatistik Alanı</h2>
+<div class="card text-white bg-primary mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">Toplam Proje Sayısı :@ViewBag.totalProjectCount</h5>
+</div>
+<div class="card text-white bg-danger mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">Toplam Referans Sayısı :@ViewBag.totalTestimonialCount</h5>
+</div>
+<div class="card text-white bg-warning mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">Toplam Çalışma Sayısı :@ViewBag.sumWorkDay</h5>
+</div>
+<div class="card text-white bg-dark mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">Toplam  Sayısı :@ViewBag.avgWorkDay</h5>
+</div>
+<div class="card text-white bg-success mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">Toplam Proje Sayısı :@ViewBag.avgPrice</h5>
+</div>
+<div class="card text-white bg-secondary mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:white">En Yüksek Fiyatlı Proje :@ViewBag.maxPriceProject</h5>
+</div>
+<div class="card text-white bg-light mb-3" style="max-width: 100%">
+    <h5 class="card-title" style="margin-left:20px; margin-top:5px; color:black">En Yüksek Fiyatlı Proje :@ViewBag.categoryCountByName</h5>
+</div>

@@ -1,0 +1,29 @@
+﻿@model MyEğitimAkademi_Portfolio.Models.CustomerAndPartners
+@{
+    ViewBag.Title = "UpdateCustomerAndPartners";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>MüşteriID</label>
+    @Html.TextBoxFor(x => x.CustomerAndPartnersID, new { @class = "form-control" })
+    <br />
+
+    <label>Müşteri Adı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    <label>Resim</label>
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
+
+

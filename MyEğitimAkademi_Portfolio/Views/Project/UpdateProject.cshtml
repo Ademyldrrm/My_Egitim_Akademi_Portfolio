@@ -1,0 +1,29 @@
+﻿@model MyEğitimAkademi_Portfolio.Models.Project
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UpdateProject</h2>
+
+<form method="post">
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ProjectID, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Des</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Category</label>
+    @Html.TextBoxFor(x => x.ProjectCategory, new { @class = "form-control" })
+    <br />
+    <label>Day</label>
+    @Html.TextBoxFor(x => x.CompleteDay, new { @class = "form-control" })
+    <br />
+    <label>Fiyat</label>
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

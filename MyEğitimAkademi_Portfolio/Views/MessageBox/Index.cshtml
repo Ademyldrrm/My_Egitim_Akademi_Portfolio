@@ -1,0 +1,30 @@
+﻿@model List<MyEğitimAkademi_Portfolio.Models.Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class=" table table-bordered">
+    <tr>
+        <th>Mesaj ID</th>
+        <th>Gönderen Ad Soyad</th>
+        <th>Mesajın Konusu</th>
+        <th>Mesajın İçeriği</th>
+        <th>Mesajı Sil</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+            <td><a href="/MessageBox/DeleteMessage/@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+
+        </tr>
+    }
+
+</table>

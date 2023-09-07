@@ -1,0 +1,26 @@
+﻿@model MyEğitimAkademi_Portfolio.Models.Skill
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yetenek Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Yetenek ID</label>
+    @Html.TextBoxFor(x => x.SkillID, new { @class = "form-control" })
+    <br />
+    <label>Yetenek Adı</label>
+    @Html.TextBoxFor(x => x.SkillTitle, new { @class = "form-control" })
+    <br />
+    <label>Yetenek Değeri</label>
+    @Html.TextBoxFor(x => x.SkillValue, new { @class = "form-control" })
+    <br />
+    <label>Yetenek Resim</label>
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+   
+
+
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

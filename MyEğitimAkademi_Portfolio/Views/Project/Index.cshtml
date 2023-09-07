@@ -1,0 +1,37 @@
+﻿@model List<MyEğitimAkademi_Portfolio.Models.Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Projelerim Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Proje Adı</th>
+        <th>Kategori</th>
+        <th>Description</th>
+        <th>Day</th>
+        <th>Fiyat</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Git Hub Linki</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.ProjectID</td>
+    <td>@item.Title</td>
+    <td>@item.ProjectCategory</td>
+    <td>@item.Description</td>
+    <td>@item.CompleteDay</td>
+    <td>@item.Price</td>
+    <td><a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-outline-danger">Sil</a></td>
+    <td><a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-outline-success">Güncelle</a></td>
+    <td><a href="https://github.com/Ademyldrrm"/@item.ProjectID class="btn btn-outline-dark">Github Linki</a></td>
+</tr>
+    }
+</table>
+<a href="/Project/AddProject/" class="btn btn-outline-primary">Yeni Proje Ekle</a>

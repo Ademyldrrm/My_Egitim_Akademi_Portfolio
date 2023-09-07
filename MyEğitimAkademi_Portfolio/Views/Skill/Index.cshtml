@@ -1,0 +1,32 @@
+﻿@model List<MyEğitimAkademi_Portfolio.Models.Skill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeteneklerim</h2>
+
+<table class=" table table-bordered">
+
+    <th>#</th>
+    <th>Yetenek Adı</th>
+    <th>Yetenek Değeri</th>
+    <th>Resim</th>
+    <th>Yetenek Sil</th>
+    <th>Yetenek Güncelle</th>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.SkillID</td>
+    <td>@item.SkillTitle</td>
+    <td>@item.SkillValue</td>
+    <td>@item.Image</td>
+
+    <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger">Sil</a></td>
+    <td><a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-outline-success">Güncelle</a></td>
+</tr>
+    }
+
+
+</table>
+    <a href="/Skill/AddSkill/" class="btn btn-outline-primary">Yeni Yetenek Girişi </a>

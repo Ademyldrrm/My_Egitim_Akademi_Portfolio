@@ -1,0 +1,19 @@
+﻿@model MyEğitimAkademi_Portfolio.Models.Award
+@{
+    ViewBag.Title = "UpdateAward";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UpdateAward</h2>
+<form method="post">
+    <label>Ödül ID</label>
+    @Html.TextBoxFor(x => x.AwardID, new { @class = "form-control" })
+    <br />
+    <label>Ödül Başlık</label>
+    @Html.TextBoxFor(x => x.AwardTitle, new { @class = "form-control" })
+    <br />
+    <label>Ödül Açıklama</label>
+    @Html.TextBoxFor(x => x.AwardDescription, new { @class = "form-control" })
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>
+

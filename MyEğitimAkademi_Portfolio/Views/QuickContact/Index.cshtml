@@ -1,0 +1,38 @@
+﻿
+@model  List<MyEğitimAkademi_Portfolio.Models.QuickContact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Hızlı İletişim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>İletişim ID</th>
+        <th>Ad Soyad</th>
+        <th>Açıklama</th>
+        <th>Telefon</th>
+        <th>Email</th>
+        <th>Instagram</th>
+        <th>Linkedin</th>
+        <th>Facebook</th>
+        <th>Twitter</th>
+        <th>İletişim Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.QuickContactID</td>
+            <td>@item.NameSurname,</td>
+            <td>@item.Description</td>
+            <td>@item.Phone</td>
+            <td>@item.Mail,</td>
+            <td>@item.Intagram</td>
+            <td>@item.Lınkedın</td>
+            <td>@item.Facebook</td>
+            <td>@item.Twitter</td>
+            <td><a href="/QuickContact/UpdateQuickContact/@item.QuickContactID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
