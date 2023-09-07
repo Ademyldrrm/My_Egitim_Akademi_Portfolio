@@ -7,4 +7,5 @@
 <h5>Entity FrameWork</h5>
 <h5>Sql Server</h5>
 
-![Uploading Ekran görüntüsü 2023-09-07 163446.png…]()
+![Ekran görüntüsü 2023-09-07 163446](https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/97e021f2-99c7-4410-829e-4a66d0094686)
+
