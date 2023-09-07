@@ -8,4 +8,5 @@
 <h5>Sql Server</h5>
 <h1>Ekranlarım</h1>
 ![img](https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/a1ccebf0-82ce-4dd3-8e02-611a36fa0563)
+![Ekran görüntüsü 2023-09-07 164403](https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/b42a0ea7-6324-4807-b93e-6e1884a63c96)
 
