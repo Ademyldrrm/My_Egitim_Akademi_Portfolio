@@ -7,5 +7,5 @@
 <h5>Entity FrameWork</h5>
 <h5>Sql Server</h5>
 <h1>Ekranlarım</h1>
-https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/28345858-6515-4af7-b885-cff3c9d70c61
+![img](https://github.com/Ademyldrrm/My_Egitim_Akademi_Portfolio/assets/92265631/a1ccebf0-82ce-4dd3-8e02-611a36fa0563)
 
