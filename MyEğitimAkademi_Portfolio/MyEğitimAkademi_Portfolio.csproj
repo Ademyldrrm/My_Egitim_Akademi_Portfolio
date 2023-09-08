@@ -589,6 +589,7 @@
     <Content Include="Views\MessageBox\Index.cshtml" />
     <Content Include="Views\QuickContact\QuickContactAdd.cshtml" />
     <Content Include="Views\_ViewImports.cshtml" />
+    <Content Include="Templates\web\images\cv.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

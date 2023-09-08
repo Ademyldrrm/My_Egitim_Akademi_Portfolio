@@ -18,6 +18,7 @@ namespace MyEğitimAkademi_Portfolio.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddAward(Award award)
         {
