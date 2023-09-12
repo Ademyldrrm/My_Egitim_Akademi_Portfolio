@@ -1,34 +1,38 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Yeni Kayıt İşlemi</title>
-    <!-- custom-theme -->
+    <!-- Custom theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Course Register Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS ve JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
     <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-               function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- //custom-theme -->
-    <!-- css files -->
+        function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- // Custom theme -->
+    <!-- CSS dosyaları -->
     <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
     <link href="~/Templates/web/css/style.css" type="text/css" rel="stylesheet" media="all">
-    <!-- //css files -->
+    <!-- // CSS dosyaları -->
 
     <link rel="stylesheet" href="~/Templates/web/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
-
 </head>
-<!-- body starts -->
+<!-- Sayfa başlangıcı -->
 <body>
-    <!-- section -->
+    <!-- Bölüm -->
     <section class="register">
         <div class="register-full">
             <div class="register-left">
@@ -38,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <h1>Yeni Kayıt Sayfası</h1>
                     <p>
-                        Sağ tarafta yer alan bilgileri eksiksiz doldurup kayıt işlemini gerçekleştirebilirsiniz.Kaydınızın gerçekleşmesi için mail aktivasyonu gerekebilir
+                        Sağ tarafta yer alan bilgileri eksiksiz doldurup kayıt işlemini gerçekleştirebilirsiniz. Kaydınızın gerçekleşmesi için mail aktivasyonu gerekebilir.
                     </p>
                     <div class="content3">
                         <ul>
@@ -52,10 +56,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="register-in">
                     <h2><span class="fa fa-pencil"></span> Buradan Kaydolun</h2>
                     <div class="register-form">
-
-
-
-
                         <form action="#" method="post">
                             <div class="fields-grid">
                                 <div class="styled-input agile-styled-input-top">
@@ -83,10 +83,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <label>Şifreniz</label>
                                     <span></span>
                                 </div>
-
-
                                 <div class="clear"> </div>
-                                <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Kabul Ediyorum<a href="#">Şartlar & Kurallar</a></label>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox" checked>
+                                    <i></i>Kayıt olmak için aşağıdaki şartları ve kuralları kabul ediyorum:
+                                    <a href="#" id="show-terms">Şartlar & Kurallar</a>
+                                </label>
                             </div>
                             <input type="submit" value="Kayıt Ol">
                         </form>
@@ -96,11 +98,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clear"> </div>
         </div>
-        <!-- copyright -->
-        <p class="agile-copyright">© @DateTime.Now.Year Course Register Form. Tüm Hakları Saklıdır | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
-        <!-- //copyright -->
+        <!-- Şartlar ve Kurallar Modalı -->
+        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">Şartlar & Kurallar</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Şartlar ve kurallar metni buraya gelecek -->
+                        <p>
+                            Kayıt olmak için aşağıdaki şartları ve kuralları kabul etmelisiniz:
+                        </p>
+                        <ol>
+                            <li>Ad Soyad: Lütfen gerçek ve eksiksiz adınızı ve soyadınızı girin.</li>
+                            <li>Kullanıcı Adı: Kendi benzersiz kullanıcı adınızı seçin ve başkalarıyla paylaşmayın.</li>
+                            <li>Email: Geçerli bir e-posta adresi girin. Bu adres üzerinden iletişim kuracağız.</li>
+                            <li>Telefon Numarası: Geçerli bir telefon numarası girin. İletişim ve bilgilendirme amaçlı kullanılabilir.</li>
+                            <li>Şifre : Şifreniz Büyük küçük harf, sayı noktalama işaretleri ve sembollerden oluşmalıdır ve en az 6 karakter olmalıdır.</li>
+                        </ol>
+                        <p>
+                            Bu şartları ve kuralları kabul etmiyorsanız, lütfen kayıt işlemine devam etmeyin.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Şartlar ve Kurallar Modalı -->
+        <!-- Telif Hakkı -->
+        <p class="agile-copyright">© @DateTime.Now.Year Course Register Form. Tüm Hakları Saklıdır | Tasarlayan: <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+        <!-- // Telif Hakkı -->
     </section>
-    <!-- //section -->
+    <!-- // Bölüm -->
 </body>
-<!-- //body ends -->
+<!-- Sayfa sonu -->
 </html>
+
+<script>
+    $(document).ready(function () {
+        $("#show-terms").click(function () {
+            $("#termsModal").modal("show");
+        });
+    });
+</script>
